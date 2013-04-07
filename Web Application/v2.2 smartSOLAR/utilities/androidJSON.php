@@ -42,5 +42,4 @@
 		$final[0] = "NULL";	
 	}	
 	echo json_encode($final, JSON_NUMERIC_CHECK);
-
 ?>
