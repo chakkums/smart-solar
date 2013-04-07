@@ -1,0 +1,61 @@
+﻿div.spacer {  
+    background-color: #8FC73E;  
+    height: 1em;  
+}  
+div#navbar {  
+    background-color: #8FC73E;  
+    padding: 10px 0 15px;
+}
+
+div#navbar ul {  
+    list-style:none;  
+    display: block;  
+    margin: 0 10px;  
+}  
+div#navbar ul li {  
+    float: left;  
+    margin: 0 1em;  
+    font: 1.5em Arial; 
+}
+div#footerWrapper {  
+	color:white;
+    background-color: #3D6E98;  
+    overflow:hidden; 
+    margin: 0 10px; 
+}
+
+#footerWrapper a:link{
+color: #FFFFFF;
+}
+
+#footerWrapper a:visited {
+color: #B3B3B3;
+}
+
+#footerWrapper a:hover {
+color:orange;
+text-decoration: underline;
+}
+
+div#summaryWrapper {
+	background-color: #E6E6E6;
+	overflow:hidden; 
+    margin: 0 10px 0 10px;
+    text-align:center;
+}
+
+div#summaryWrapper p{
+	margin:0 10px 10px 10px;
+}
+
+div#summaryWrapper h1{
+	margin:0 10px 5px 10px;
+}
+
+#slideshowSlides {
+	width: 940px;
+	height: 307px;
+    padding: 0;
+    margin:  0 auto;
+} 
+

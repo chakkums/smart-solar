@@ -1,0 +1,12 @@
+﻿div#standardWrapper {
+	background-color: #E6E6E6;
+	overflow:hidden; 
+    margin: 0 10px;
+}
+
+div#detailWrapper {
+	overflow:auto; 
+    margin: 0 0 0 0;
+    border:2 black solid;
+}
+

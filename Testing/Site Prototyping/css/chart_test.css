@@ -1,0 +1,51 @@
+﻿#container {
+	margin: 0 auto;
+	height: 50px;
+}
+header {
+	background-color: gray;
+	display: block;
+	width: auto;
+	height: 50px;
+}
+div#menuBar ul {
+	list-style: none;
+	display: block;
+	margin: 0 5px;
+}
+div#menuBar ul li {
+	float: left;
+	margin: 1em 1em;
+	font: 1.2em Calibri;
+}
+div#loginInfo {
+	color: white;
+	margin: 0.5em 0.5em;
+	font: 1.2em Calibri;
+}
+div#content {
+	display: block;
+	width: auto;
+	color: white;
+	background-color: #DEDEDE;
+	overflow: hidden;
+	height: auto;
+}
+footer {
+	display: block;
+	width: auto;
+	color: white;
+	background-color: #3D6E98;
+	overflow: hidden;
+	height: 175px;
+}
+footer a:link {
+	color: #FFFFFF;
+}
+footer a:visited {
+	color: #B3B3B3;
+}
+footer a:hover {
+	color: orange;
+	text-decoration: underline;
+}
