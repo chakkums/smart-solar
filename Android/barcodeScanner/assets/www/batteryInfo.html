@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>Battery Information</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+	<script type="text/javascript" charset="utf-8" src="cordova-1.6.1.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script src="highcharts.js"></script>
+
+
+  </head>
+  <header>
+  	<br/>
+  	<img alt="smartSOLAR" src="images/smartSolarLogo.png" />
+  	<br/>
+  </header>
+  
+  <body>  	
+  	<div id="information">  	
+	<script>
+	  	var hash = location.hash;
+	
+			var batteryID = hash.substring(1);
+				
+		//Could get information from ID but better to keep all calculations done on server.
+	
+	var request = $.ajax({
+            url: "http://176.250.25.30/smartSOLAR/utilities/androidJSON.php?batID=" + batteryID,
+            type: "GET",            
+            dataType: "json",
+            async: false // makes this hold until data is all received.
+        });
+ 
+        request.done(function(data) {
+        if(data[0] != "NULL"){
+        	document.write("<h3> Battery ID: " + batteryID + "</h3><br/>");
+        	
+        	if(data[7] == 0){
+        		document.write("<img src=\"images/tick.png\" ><br/> Battery enabled <br/>");
+        	}else{
+        		document.write("<img src=\"images/cross.png\" ><br/>Battery disabled <br/>");
+        	}
+        
+			document.write("<b> Location: </b>" +data[0]+ "<br/>");
+			document.write("<b> Number: </b>" +data[1]+ "<br/>");
+			document.write("<b> Type: </b>" +data[2]+ "<br/>");
+			document.write("<b> Last Charged: </b>" +data[3]+ "<br/>");
+			document.write("<b> Time to Charge: </b>" +data[4]+ " h<br/>");
+			document.write("<b> State of Health: </b>" +data[5]+ " %<br/>");
+			document.write("<b> Available Capacity: </b>" +data[6]+ " Ah<br/>");
+			}else{
+				document.write("Invalid battery scanned.<br/> Please try again.<br/><br/>");
+			}
+        });
+ 
+        request.fail(function(jqXHR, textStatus) {
+            alert( "Request failed: " + textStatus );
+        });
+
+	</script>   	
+	</div>
+		<div id="buttonWrapper">
+			<button id="button" onclick="returnToScan();" type="button">
+			Back to Scan Battery</button>
+			<br/>
+			<br/>
+		</div>	
+  </body>
+<footer>
+  	<br/>
+  	<img alt="Strathclyde" src="images/logos.png" />
+  	<br/>
+  	<br/>
+  	<br/>
+  </footer>
+</html>

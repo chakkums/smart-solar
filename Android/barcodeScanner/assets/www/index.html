@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+	<script type="text/javascript" charset="utf-8" src="cordova-1.6.1.js"></script>
+	<script type="text/javascript" src="barcodescanner.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+  </head>
+  <header>
+  	<br/>
+  	<img alt="smartSOLAR" src="images/smartSolarLogo.png" />
+  	<br/>
+  </header>
+  
+  <body>
+  	<div id="information">
+   	<p>
+   		Press the button below to scan your battery's QR code, and it's
+   		details will be fetched and displayed on screen.
+   	</p>	
+   	</div>
+	<div id="buttonWrapper">
+			<button id="button" onclick="scanCode();" type="button">
+			Scan Battery</button>
+			<br/>
+			<br/>
+			<br/>
+
+		</div>
+		
+  </body>
+  
+  <footer>
+  	<br/>
+  	<img alt="Strathclyde" src="images/logos.png" />
+  	<br/>
+  	<br/>
+  	<br/>
+  </footer>
+</html>
