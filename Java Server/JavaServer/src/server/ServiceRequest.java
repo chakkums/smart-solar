@@ -26,8 +26,6 @@ public class ServiceRequest implements Runnable {
 	 this.client = client;
 	 }
 
-
-
 	@Override
 	public void run() {
 
