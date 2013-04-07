@@ -480,17 +480,3 @@ String receiveFromModem(){
     } 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
