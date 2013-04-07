@@ -1,0 +1,14 @@
+﻿input[type=text]
+{
+    border-style: none;
+	border-color: inherit;
+	border-width: 0;
+	color:white;
+    background-color: #8B8B8B;
+    height: 22px;
+    width: 150px;
+    padding-left: 10px;
+    text-decoration: none;
+    background-repeat: repeat-x;
+    border-radius: 5px; 
+    }
