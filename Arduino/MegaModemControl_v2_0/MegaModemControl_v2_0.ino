@@ -123,7 +123,9 @@ void setup() {
   lcd.begin(16,2);
   digitalWrite(13, LOW);
   lcd.print("    POWER ON");
-  delay(2300);
+  lcd.setCursor(0,1);
+  lcd.print("   smartSOLAR   ");
+  delay(4000);
   
   setUpModem();
 
